@@ -1,0 +1,1 @@
+$scheduleDate = (Get-Date).AddDays(1).ToString("MM/dd/yyyy"); schtasks /create /tn "RebootTask" /tr "shutdown /r /f /t 0" /sc once /st 23:59 /sd $scheduleDate /ru "SYSTEM"
